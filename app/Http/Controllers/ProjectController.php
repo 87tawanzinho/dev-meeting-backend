@@ -17,7 +17,8 @@ class ProjectController extends Controller
                 'description' => 'required|string',
                 'user_id' => 'required|exists:users,id',  // Verifica se o usuário existe
                 'start_date' => 'required|date',
-                'end_date' => 'required|date|after:start_date',  // Data de término deve ser depois da data de início
+                'end_date' => 'required|date|after:start_date',  // Data de término deve ser depois da data de início,
+                'type' => 'string'
             ]);
     
             // Criação do projeto
